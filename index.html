@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 20vh;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(10,10,10,.86);
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: #F5F1E8;
+}
+
+.name h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.name h1 img {
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.menu ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #F5F1E8;
+    font-family: sans-serif;
+    transition: 0.2s;
+}
+
+.menu ul li a:hover{
+    color: #676767;
+}
+
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.texto-intro{
+    width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #F5F1E8;
+        color: #0a0a0a;
+        padding: 50px 8%;
+}
+
+.texto-intro-bg strong {
+        display: block;
+        font-size: 3.5rem;
+        font-weight: 900;
+        line-height: 1;
+        margin-bottom: 15px;
+        letter-spacing: -1px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+.texto-intro h2{
+    font-size: 0.9rem;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+        color: #555;
+        font-weight: 700;
+        font-family: "Montserrat", sans-serif;
+}
+
+.texto-intro p{
+    font-size: 1.2rem;
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        color: #333;
+}
+
+.muestra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.muestra-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(10,10,10,.86); 
+}
+
+.muestra-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.marquee {
+    width: 100%;
+	line-height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 25s linear infinite;
+}
+@keyframes marquee {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+.editorial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 93vh;
+    font-family: "Montserrat", sans-serif;
+}
+
+.eyebrown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.eyebrown h2 {
+        padding: 30px;
+        font-size: 2.5rem;
+        line-height: 1.1;
+        font-weight: 300;
+}
+
+.eyebrown span{
+    font-size: 4rem;
+    font-weight: 900;
+    display: block;
+    letter-spacing: -1px;
+}
+
+.editorial-copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 6%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.editorial-copy p{
+    font-size: 20px;
+}
+
+.galery {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100%;
+        transform-style: preserve-3d;
+        overflow: hidden;
+        background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+    }
+
+.galery h2{
+    position: absolute;
+    top: 0;
+    font-size: 4rem;
+    font-weight: 900;
+    display: block;
+    letter-spacing: -1px;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+    .galery-image {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+    .galery-image .item {
+        position: absolute;
+        width: 220px;
+        height: 320px;
+        background: #111;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+        transform-style: preserve-3d;
+        user-select: none;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0,0,0,0.2));
+    }
+
+    /* Stack styling for the 3D depth effect */
+    .galery-image .item:nth-child(1) {
+        transform: translate3d(-350px, 0, -100px) scale(0.9) rotateY(30deg);
+        z-index: 1;
+        opacity: 0.5;
+    }
+
+    .galery-image .item:nth-child(2) {
+        transform: translate3d(-240px, 0, -50px) scale(1) rotateY(20deg);
+        z-index: 2;
+        opacity: 0.75;
+    }
+
+    .galery-image .item:nth-child(3) {
+        transform: translate3d(-120px, 0, 0) scale(1.1) rotateY(10deg);
+        z-index: 3;
+        opacity: 0.9;
+    }
+
+    .galery-image .item:nth-child(4) {
+        transform: translate3d(0, 0, 80px) scale(1.3) rotateY(0deg);
+        z-index: 4;
+        opacity: 1;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .galery-image .item:nth-child(5) {
+        transform: translate3d(120px, 0, 0) scale(1.1) rotateY(-10deg);
+        z-index: 3;
+        opacity: 0.9;
+    }
+
+    .galery-image .item:nth-child(6) {
+        transform: translate3d(240px, 0, -50px) scale(1) rotateY(-20deg);
+        z-index: 2;
+        opacity: 0.75;
+    }
+
+    .galery-image .item:nth-child(7) {
+        transform: translate3d(350px, 0, -100px) scale(0.9) rotateY(-30deg);
+        z-index: 1;
+        opacity: 0.5;
+    }
+
+    .galery-image .item img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.buttons {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    gap: 20px;
+}
+
+.buttons span{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+}
+
+.buttons span:hover{
+    opacity: 1;
+}
+
+.buttons span::before{
+    content: '';
+    position: absolute;
+    left: 20px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    rotate: -45deg;
+}
+
+.buttons span:last-child::before{
+    content: '';
+    position: absolute;
+    left: initial;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    rotate: 135deg;
+}
+
+@media (max-width: 850px) {
+        header { height: auto; }
+        .titulo, .intro, .editorial { flex-direction: column; }
+        .name, .menu, .texto-intro, .muestra, .eyebrown, .editorial-copy {
+            width: 100%;
+        }
+        .name h1 img {
+         width: 100%;
+         object-fit: contain;
+         }
+        .name { padding: 25px 0; }
+        .menu { padding: 20px 0; }
+        .intro { height: auto; }
+        .texto-intro { padding: 60px 8%; }
+        .muestra { min-height: 350px; }
+        .galery-image .item { width: 160px; height: 240px; }
+        .galery h2{font-size: 45px}
+        .galery-image .item:nth-child(1) { transform: translate3d(-180px,0,-100px) scale(0.7) rotateY(30deg); }
+        .galery-image .item:nth-child(2) { transform: translate3d(-120px,0,-50px) scale(0.85) rotateY(20deg); }
+    .galery-image .item:nth-child(3) { transform: translate3d(-60px,0,0) scale(1) rotateY(10deg); }
+        .galery-image .item:nth-child(4) { transform: translate3d(0,0,50px) scale(1.15) rotateY(0deg); }
+        .galery-image .item:nth-child(5) { transform: translate3d(60px,0,0) scale(1) rotateY(-10deg); }
+        .galery-image .item:nth-child(6) { transform: translate3d(120px,0,-50px) scale(0.85) rotateY(-20deg); }
+        .galery-image .item:nth-child(7) { transform: translate3d(180px,0,-100px) scale(0.7) rotateY(-30deg); }
+    }
+  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lino & co.</title>
+    <meta name="description" content="Lino & co. es streetwear contemporáneo para quienes convierten su estilo en identidad. Camisetas premium, siluetas modernas y drops limitados.">
+    <meta name="keywords" content="streetwear, camisetas premium, ropa urbana, moda urbana, camisetas oversize, streetwear Colombia">
+    <meta name="author" content="Lino & co.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="canonical" href="https://www.tudominio.com/">
+    <link rel="icon" href="imagenes/logo-lino-&-co..png" type="logo lino & co.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lino & co. — Streetwear contemporáneo">
+    <meta property="og:description" content="Camisetas premium. Actitud contemporánea. Drops limitados.">
+    <meta property="og:url" content="https://www.tudominio.com/">
+    <meta property="og:image" content="https://www.tudominio.com/assets/img/og-cover.jpg">
+    <meta property="og:locale" content="es_CO">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lino & co. — Streetwear contemporáneo">
+    <meta name="twitter:description" content="Lino & co. premium para una nueva generación.">
+    <meta name="twitter:image" content="https://www.tudominio.com/assets/img/og-cover.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+        <section class="titulo">
+          <article class="name">
+            <h1><img src="imagenes/logo-lino-&-co..png" alt=""></h1>
+          </article>
+          <article class="menu">
+            <nav>
+              <ul>
+                <li><a href="#">INICIO</a></li>
+                <li><a href="#">MANUFACTURA</a></li>
+                <li><a href="#">CONTACTO</a></li>
+              </ul>
+            </nav>
+          </article>
+        </section>
+  </header>
+  
+  <section class="intro">
+    <article class="texto-intro">
+      <h2>Lino & co. / COLECCION / 2026</h2>
+    <div class="texto-intro-bg">
+      <strong>
+        WEAR EDGE.
+      </strong>
+      <p>
+        Streetwear contenporáneo para quienes no necesitan permiso para tener estilo.
+      </p>
+    </div>
+    </article>
+    
+    <article class="muestra">
+  	<div class="muestra-image"><img src="imagenes/skull-png.png" alt="Camiseta Skull"></div>
+  </article>
+    
+  </section>
+  
+  <section class="marquee">
+    
+    <p>
+      LIMITED DROP ✦ PREMIUM WEIGHT ✦ MADE FOR THE CITY ✦ NO BASIC ENERGY ✦
+    </p>
+    
+  </section>
+  
+  <section class="editorial">
+    
+  	<article class="eyebrown">
+      
+      <h2>
+        Lino & co.
+        <br>
+        <span>JUST ATITUDE</span>
+      </h2>
+      
+    </article>
+    
+  	<article class="editorial-copy">
+      
+      <P>
+        Una colección construida alrededor de proporciones limpias, algodón de alto gramaje 
+        y detalles que se descubren de cerca. Menos ruido. Más presencia.
+      </P>
+      
+    </article>
+    
+  </section>
+  
+  <section class="galery">
+    <h2>streetwear style</h2>
+  	<article class="galery-image">
+      <div class="item"><img src="imagenes/camiseta-busto.jpg"></div>
+      <div class="item"><img src="imagenes/camiseta-dedo.jpg"></div>
+      <div class="item"><img src="imagenes/camiseta-hindu.jpg"></div>
+      <div class="item"><img src="imagenes/camiseta-pasamontana.jpg"></div>
+      <div class="item"><img src="imagenes/camiseta-simiobusto.jpg"></div>
+      <div class="item"><img src="imagenes/camiseta-skull.jpg"></div>
+      <div class="item"><img src="imagenes/camiseta-triangulo.jpg"></div> 
+    </article>
+    <article class="buttons">
+      <span class="prev"></span>
+      <span class="next"></span>
+    </article>
+  </section>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let prev = document.querySelector('.prev');
+        let next = document.querySelector('.next');
+        let galeryImage = document.querySelector('.galery-image');
+
+        next.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item');
+            galeryImage.appendChild(items[0]);
+        });
+
+        prev.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item');
+            galeryImage.prepend(items[items.length - 1]);
+        });
+
+        // Soporte adicional para la navegación mediante teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                next.click();
+            } else if (e.key === 'ArrowLeft') {
+                prev.click();
+            }
+        });
+    });
+  </script>
+</body>
+</html>
